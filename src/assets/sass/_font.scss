@@ -1,0 +1,65 @@
+// fonts starts
+
+@mixin font-family($font, $size , $color, $value:none) {
+    font-size:$size;
+    color: $color;
+    font-family: $font;
+    text-transform: $value;
+}
+
+@mixin font($size , $color, $value:none) {
+    font-size:$size;
+    color: $color;
+    text-transform: $value;
+}
+
+// sdas
+/* page all font-family */
+$regular            : "Segoeui";
+$bold               : "Segoeui-bold";
+$semibold           : "Segoeui-semibold";
+$helveticalight     : "Helvetica-light";
+
+/*  page all color  */
+$white              : #ffffff;
+$black              : #000000;
+
+/* page all font size */
+$size11             : 11px;
+$size12             : 12px;
+$size13             : 13px;
+$size14             : 14px;
+$size15             : 15px;
+$size16             : 16px;
+$size17             : 17px;
+$size18             : 18px;
+$size19             : 19px;
+$size20             : 20px;
+$size21             : 21px;
+$size22             : 25px;
+$size23             : 23px;
+$size24             : 24px;
+$size25             : 25px;
+$size53             : 53px;
+
+@font-face {
+    font-family: $regular;   
+    src: url("fonts/Segoeui/segoeui-regular.ttf");
+}
+
+@font-face {
+    font-family:$bold;   
+    src: url("fonts/Segoeui/segoeui-bold.ttf");
+}
+
+@font-face {
+    font-family:$semibold;   
+    src: url("fonts/Segoeui/segoeui-semibold.ttf");
+}
+
+@font-face {
+    font-family:$helveticalight;   
+    src: url("fonts/Helvetica/HelveticaNeueCyr-Light.otf");
+}
+
+// fonts ends
