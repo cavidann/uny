@@ -1,17 +1,36 @@
-// mobile starts
+@include mQ(1440px){}
 
-@media only screen and (max-width:1440px) {}
+@include mQ(1300px){}
 
-@media only screen and (max-width:1300px) {}
+@include mQ(1200px){}
 
-@media only screen and (max-width:1199px) {}
+@include mQ(991px){}
 
-@media only screen and (max-width:992px) {}
+// @include mQ(823px){}
 
-@media only screen and (max-width:767px) {}
+// @include mQ(812px){}
 
-@media only screen and (max-width:575px) {}
+@include mQ(768px){}
 
-@media only screen and (max-width:475px) {}
+// @include mQ(736px){}
 
-// mobile ends
+// @include mQ(731px){}
+
+// @include mQ(667px){}
+
+// @include mQ(640px){}
+
+@include mQ(576px){}
+
+// @include mQ(568px){}
+
+@include mQ(414px){}
+
+// @include mQ(411px){}
+
+@include mQ(375px){}
+
+// @include mQ(360px){}
+
+@include mQ(320px){}
+

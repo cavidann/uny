@@ -25,11 +25,21 @@ gulp.task('fileinclude', function () {
         .pipe(gulp.dest('./build/')); //Выплюнем их в папку build
 });
 
-//sass compiles here  
+//css bundle here  
+gulp.task('bundleCss', () => {
+    gulp.src([
+        source + '/libs/components-bootstrap/css/bootstrap.min.css'
+        // plugin`s css 
+    ])
+        .pipe(cleanCSS()) //minify
+        .pipe(concat("plugins.min.css"))
+        .pipe(gulp.dest(build + '/assets/css'))
+}
+);
+
+//sass compiles here
 gulp.task('sass', () => {
     gulp.src([
-        source + '/libs/components-bootstrap/css/bootstrap.min.css',
-        // plugin`s css 
         source + '/assets/sass/imports.scss' // Always at the end
     ])
 
@@ -38,24 +48,30 @@ gulp.task('sass', () => {
             browsers: ['last 10 versions'],
             cascade: false
         }))
-        .pipe(cleanCSS()) //minify
-        .pipe(concat("styles.min.css"))
+        .pipe(concat("styles.css"))
         .pipe(gulp.dest(build + '/assets/css'))
 }
 );
 
-// script starts
-gulp.task('script', function () {
+// scripts bundle starts
+gulp.task('bundleScript', function () {
     return gulp.src([
-        source + '/libs/jquery/dist/jquery.min.js',
-        // plugin`s js 
-        source + '/assets/js/script.js' // Always at the end
+        source + '/libs/jquery/dist/jquery.min.js'
+        // Plugin`s js here
     ])
         .pipe(uglify()) //minify
-        .pipe(concat('scripts.min.js'))
+        .pipe(concat('plugins.min.js'))
         .pipe(gulp.dest(build + '/assets/js'))
 })
 
+// scripts copy starts
+gulp.task('script', function () {
+    return gulp.src([
+        source + '/assets/js/script.js' // Always at the end
+    ])
+        .pipe(concat('scripts.js'))
+        .pipe(gulp.dest(build + '/assets/js'))
+})
 
 //icon min
 gulp.task('icons', () => 
@@ -94,4 +110,4 @@ gulp.task('watch', function () {
 });
 
 //gulp default test
-gulp.task('default', ['fileinclude', 'sass', 'script', 'imgs', 'icons', 'fonts', 'watch'])
+gulp.task('default', ['fileinclude', 'bundleCss', 'bundleScript', 'sass', 'script', 'imgs', 'icons', 'fonts', 'watch'])

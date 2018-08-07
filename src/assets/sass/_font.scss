@@ -1,4 +1,8 @@
-// fonts starts
+// page all color  /
+$white              : #ffffff;
+$black              : #000000;
+
+/* fonts starts*/
 
 @mixin font-family($font, $size , $color, $value:none) {
     font-size:$size;
@@ -13,18 +17,16 @@
     text-transform: $value;
 }
 
-// sdas
-/* page all font-family */
+
+// page all font-family 
 $regular            : "Segoeui";
 $bold               : "Segoeui-bold";
 $semibold           : "Segoeui-semibold";
 $helveticalight     : "Helvetica-light";
 
-/*  page all color  */
-$white              : #ffffff;
-$black              : #000000;
 
-/* page all font size */
+
+// page all font size 
 $size11             : 11px;
 $size12             : 12px;
 $size13             : 13px;
@@ -41,6 +43,8 @@ $size23             : 23px;
 $size24             : 24px;
 $size25             : 25px;
 $size53             : 53px;
+
+/* fonts starts */
 
 @font-face {
     font-family: $regular;   
@@ -62,4 +66,4 @@ $size53             : 53px;
     src: url("fonts/Helvetica/HelveticaNeueCyr-Light.otf");
 }
 
-// fonts ends
+/* fonts ends */
