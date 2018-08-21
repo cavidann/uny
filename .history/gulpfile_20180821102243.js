@@ -37,30 +37,10 @@ gulp.task('bundleCss', () => {
 }
 );
 
-//sass imports here
-gulp.task('import', () => {
-    gulp.src([
-        source + '/assets/sass/reset.scss', // Always at the end
-        source + '/assets/sass/mixin.scss', // Always at the end
-        source + '/assets/sass/font.scss', // Always at the end
-        source + '/assets/sass/main.scss', // Always at the end
-        source + '/assets/sass/mobile.scss' // Always at the end
-    ])
-
-        // .pipe(sass()).on('error', sass.logError)
-        // .pipe(autoprefixer({
-        //     browsers: ['last 10 versions'],
-        //     cascade: false
-        // }))
-        .pipe(concat("styles.scss"))
-        .pipe(gulp.dest(build + '/assets/sass'))
-}
-);
-
-//sass compile here
+//sass compiles here
 gulp.task('sass', () => {
     gulp.src([
-        'build/assets/sass/styles.scss', // Always at the end
+        source + '/assets/sass/imports.scss' // Always at the end
     ])
 
         .pipe(sass()).on('error', sass.logError)
@@ -68,7 +48,7 @@ gulp.task('sass', () => {
             browsers: ['last 10 versions'],
             cascade: false
         }))
-        // .pipe(concat("styles.sass"))
+        .pipe(concat("styles.css"))
         .pipe(gulp.dest(build + '/assets/css'))
 }
 );
@@ -120,8 +100,7 @@ gulp.task('watch', function () {
     });
 
     gulp.watch(source + '/*.html', ['fileinclude']);
-    gulp.watch(source + '/assets/**/*.scss', ['import']);
-    gulp.watch('build/assets/sass/**/*.scss', ['sass']);
+    gulp.watch(source + '/assets/**/*.scss', ['sass']);
     gulp.watch(source + '/assets/**/*.js', ['script']);
     gulp.watch(source + '/assets/img/**/*', ['imgs']);
     gulp.watch(source + '/assets/css-dep/icons/**/*', ['icons']);
@@ -131,4 +110,4 @@ gulp.task('watch', function () {
 });
 
 //gulp default test
-gulp.task('default', ['fileinclude','import', 'bundleCss', 'bundleScript', 'sass', 'script', 'imgs', 'icons', 'fonts', 'watch'])
+gulp.task('default', ['fileinclude', 'bundleCss', 'bundleScript', 'sass', 'script', 'imgs', 'icons', 'fonts', 'watch'])
