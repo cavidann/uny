@@ -1,0 +1,17 @@
+
+.post{
+    width: 80%;
+    margin: 0 auto;
+    img{
+        width: 100%;
+    }
+    .main, .main p, .sub p{
+        border: 1px solid;
+        padding: 10px;
+    }
+    .sub, .main form{
+        width: calc(100% - 20px);
+        float: right;
+    }
+}
+
