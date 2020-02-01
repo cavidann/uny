@@ -1,0 +1,217 @@
+//= include/header.html
+
+<div class="container">
+    <div class="route">
+        <span><a href="#" class="wow fadeInUp" data-wow-delay=".3s">Home></a></span>
+        <span><a href="#" class="wow fadeInUp" data-wow-delay=".4s">Contacts</a></span>
+    </div>
+</div>
+
+<div class="map-outer locations">
+    <div style="height: calc(100vh - 138px)" id="map" class="col-100"></div>
+
+    <div class="container flex wrap region-select-list">
+        <div class="select wow fadeInUp" data-wow-delay=".2s">
+            <div class="select-name flex flex-middle">
+                <span>select region</span>
+                <img src="assets/img/dotted-arrow-down.svg" alt="">
+            </div>
+            <div class="select-list">
+                <ul>
+                    <li onclick="zoomToLocation(40.397945, 49.839313, 5)">Americas</li>
+                    <li onclick="zoomToLocation(20.9005, 20.20633, 5)">Asia-Pacific</li>
+                    <li onclick="zoomToLocation(40.397945, 49.839313, 5)">Europe</li>
+                    <li onclick="zoomToLocation(20.9005, 20.20633, 5)">Middle East & Africa</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="select wow fadeInUp" data-wow-delay=".3s">
+            <div class="select-name flex flex-middle">
+                <span>select country</span>
+                <img src="assets/img/dotted-arrow-down.svg" alt="">
+            </div>
+            <div class="select-list">
+                <ul>
+                    <li onclick="zoomToLocation(40.397945, 49.839313, 7)">Angola</li>
+                    <li onclick="zoomToLocation(20.9005, 20.20633, 7)">Bahrain</li>
+                    <li onclick="zoomToLocation(40.397945, 49.839313, 7)">Egypt</li>
+                    <li onclick="zoomToLocation(20.9005, 20.20633, 7)">Ghana</li>
+                    <li onclick="zoomToLocation(20.9005, 20.20633, 7)">Iran, Islamic Republic of</li>
+                    <li onclick="zoomToLocation(20.9005, 20.20633, 7)">Israel</li>
+                    <li onclick="zoomToLocation(20.9005, 20.20633, 7)">Jordan</li>
+                    <li onclick="zoomToLocation(20.9005, 20.20633, 7)">Kuwait</li>
+                    <li onclick="zoomToLocation(20.9005, 20.20633, 7)">Lebanon</li>
+                </ul>
+                <ul>
+                    <li onclick="zoomToLocation(20.9005, 20.20633, 7)">Mauritius</li>
+                    <li onclick="zoomToLocation(20.9005, 20.20633, 7)">Morocco</li>
+                    <li onclick="zoomToLocation(20.9005, 20.20633, 7)">Mozambique</li>
+                    <li onclick="zoomToLocation(20.9005, 20.20633, 7)">Nigeria</li>
+                    <li onclick="zoomToLocation(20.9005, 20.20633, 7)">Saudi Arabia</li>
+                    <li onclick="zoomToLocation(20.9005, 20.20633, 7)">Seychelles</li>
+                    <li onclick="zoomToLocation(20.9005, 20.20633, 7)">South Africa</li>
+                    <li onclick="zoomToLocation(20.9005, 20.20633, 7)">Tunisia</li>
+                    <li onclick="zoomToLocation(20.9005, 20.20633, 7)">Uganda</li>
+                </ul>
+                <ul>
+                    <li onclick="zoomToLocation(20.9005, 20.20633, 7)">United Arab Emirates</li>
+                    <li onclick="zoomToLocation(20.9005, 20.20633, 7)">Zambia</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="select wow fadeInUp" data-wow-delay=".4s">
+            <div class="select-name flex flex-middle">
+                <span>select city</span>
+                <img src="assets/img/dotted-arrow-down.svg" alt="">
+            </div>
+            <div class="select-list">
+                <ul>
+                    <li onclick="zoomToLocation(40.397945, 49.839313, 10)">Americas</li>
+                    <li onclick="zoomToLocation(20.9005, 20.20633, 10)">Asia-Pacific</li>
+                    <li onclick="zoomToLocation(40.397945, 49.839313, 10)">Europe</li>
+                    <li onclick="zoomToLocation(20.9005, 20.20633, 10)">Middle East & Africa</li>
+                </ul>
+            </div>
+        </div>
+
+        <a href="#" class="write-us-btn wow fadeInUp" data-wow-delay=".5s">
+            <img src="assets/img/envelope.svg" alt="">
+            <span>Write us</span>
+        </a>
+    </div>
+</div>
+
+<section class="international locations">
+    <div class="container">
+        <div class="main-content flex flex-start">
+            <div class="texts">
+                <div class="col-100">
+                    <div class="mw-510">
+                        <h1 class="wow fadeInUp" data-wow-delay=".1s">UHY LLC </h1>
+                        <p class="info wow fadeInUp" data-wow-delay=".3s">We’re connected...</p>
+                        <p class="wow fadeInUp" data-wow-delay=".4s">
+                            Our network has over 300 offices across 100 countries.
+                            Use the map above to locate your nearest office or pick a region from the list below:
+                        </p>
+                    </div>
+                </div>
+                <div class="location-info col-100">
+                    <h2 class="wow fadeInUp" data-wow-delay=".3s">Canada</h2>
+                    <div class="doc flex wrap flex-between flex-middle wow fadeInUp" data-wow-delay=".4s">
+                        <a href="#" download class="left flex flex-middle">
+                            <img src="assets/img/pdf-icon.svg" alt="">
+                            <h3>Doing Business in Canada</h3>
+                        </a>
+                        <div class="right time">
+                            Local Time : 19:16
+                        </div>
+                    </div>
+                </div>
+                <div class="location-table col-100">
+                    <table class="col-100 wow fadeInUp" data-wow-delay=".7s">
+                        <tr>
+                            <th>Regions</th>
+                            <th>Countries</th>
+                            <th>Cities</th>
+                        </tr>
+                        <tr>
+                            <td><span class="active">Americas</span></td>
+                            <td>
+                                <span>Argentina</span>
+                                <span>Dominican Republic</span>
+                                <span>Panama</span>
+                            </td>
+                            <td><span class="active">Montreal</span></td>
+                        </tr>
+                        <tr>
+                            <td><span>Asia-Pacific</span></td>
+                            <td>
+                                <span>Bahamas</span>
+                                <span>Ecuador</span>
+                                <span>Paraguay</span>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><span>Europe</span></td>
+                            <td>
+                                <span>Bolivia</span>
+                                <span>El Salvador</span>
+                                <span>Peru</span>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><span>Middle East & Africa</span></td>
+                            <td>
+                                <span>Brazil</span>
+                                <span>Guatemala</span>
+                                <span>Puerto Rico</span>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <span class="active">Canada</span>
+                                <span>Honduras</span>
+                                <span>United States</span>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <span>Chile</span>
+                                <span>Mexico</span>
+                                <span>Uruguay</span>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <span>Costa Rica</span>
+                                <span>Nicaragua</span>
+                                <span>Venezuela</span>
+                            </td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="branch-info wow fadeInUp" data-wow-delay=".5s">
+                <img class="col-100" src="assets/img/partner.png" alt="">
+                <div class="about">
+                    <div class="group">
+                        <h2>Contact Partner</h2>
+                        <p class="name">Ken Shemie</p>
+                        <p>
+                            +1 514 282 1836 <br>
+                            kshemie@uhyvictor.com
+                        </p>
+                    </div>
+                    <div class="group">
+                        <p class="name">UHY Victor LLP</p>
+                        <p>
+                            759 Square Victoria <br>
+                            Suite 400 <br>
+                            Montreal , QC , H2Y 2J7 <br>
+                            Canada <br>
+                            www.uhyvictor.com <br>
+                        </p>
+                    </div>
+                    <a href="#" download class="file-download flex flex-middle">
+                        <img src="assets/img/pdf-icon.svg" alt="">
+                        <h3>Firm profile</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+//= include/footer.html

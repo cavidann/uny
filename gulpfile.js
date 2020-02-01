@@ -28,7 +28,9 @@ gulp.task('fileinclude', function () {
 //css bundle here  
 gulp.task('bundleCss', () => {
     gulp.src([
-        source + '/libs/components-bootstrap/css/bootstrap.min.css'
+        source + '/libs/owl-carousel/css/owl.carousel.min.css',
+        source + '/libs/owl-carousel/css/owl.theme.default.min.css',
+        source + '/libs/animation/css/animate.css'
         // plugin`s css 
     ])
         .pipe(cleanCSS()) //minify
@@ -76,7 +78,9 @@ gulp.task('sass', () => {
 // scripts bundle starts
 gulp.task('bundleScript', function () {
     return gulp.src([
-        source + '/libs/jquery/dist/jquery.min.js'
+        source + '/libs/jquery/dist/jquery.min.js',
+        source + '/libs/owl-carousel/js/owl.carousel.min.js',
+        source + '/libs/animation/js/wow.min.js',
         // Plugin`s js here
     ])
         .pipe(uglify()) //minify
@@ -98,6 +102,12 @@ gulp.task('icons', () =>
     gulp.src(source + '/assets/css-dep/icons/**/*')
     .pipe(imagemin())
     .pipe(gulp.dest(build + '/assets/css/icons'))
+);
+
+//js copy
+gulp.task('copyMap', () => 
+    gulp.src(source + '/assets/js/map.js')
+    .pipe(gulp.dest(build + '/assets/js'))
 );
 
 //fonts copy
@@ -126,9 +136,10 @@ gulp.task('watch', function () {
     gulp.watch(source + '/assets/img/**/*', ['imgs']);
     gulp.watch(source + '/assets/css-dep/icons/**/*', ['icons']);
     gulp.watch(source + '/assets/css-dep/fonts/**/*', ['fonts']);
+    gulp.watch(source + '/assets/js/map.js', ['copyMap']);
     gulp.watch("build/**/*").on("change", browserSync.reload);
 
 });
 
 //gulp default test
-gulp.task('default', ['fileinclude','import', 'bundleCss', 'bundleScript', 'sass', 'script', 'imgs', 'icons', 'fonts', 'watch'])
+gulp.task('default', ['fileinclude','import', 'bundleCss', 'bundleScript', 'sass', 'script', 'imgs', 'icons', 'fonts', 'copyMap', 'watch'])

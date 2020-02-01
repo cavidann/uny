@@ -1,8 +1,19 @@
 @include mQ(1440px){}
 
-@include mQ(1300px){}
+@include mQ(1300px){
+    .nav-wrapper.fix-menu nav {
+        max-width: 100%!important;
+        width: 100%!important;
+        margin: 0px!important;
+    }
+    .container{
+        padding-left: 32px!important;
+        padding-right: 32px!important;
+    }
+}
 
-@include mQ(1200px){}
+@include mQ(1150px){
+}
 
 @include mQ(991px){}
 
